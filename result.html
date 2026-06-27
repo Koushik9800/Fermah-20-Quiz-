@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Quiz Result</title>
+
+<link rel="stylesheet" href="style.css">
+
+<style>
+.result-card{
+max-width:500px;
+margin:100px auto;
+padding:40px;
+background:#0d2942;
+border-radius:20px;
+text-align:center;
+box-shadow:0 0 20px rgba(0,216,197,.4);
+}
+
+.result-card h1{
+color:#00D8C5;
+margin-bottom:20px;
+}
+
+.result-card h2{
+margin:20px 0;
+font-size:40px;
+}
+
+.result-card p{
+font-size:18px;
+margin:10px 0;
+}
+
+.btn{
+display:inline-block;
+margin-top:25px;
+padding:15px 35px;
+background:#00D8C5;
+color:#071B2F;
+text-decoration:none;
+font-weight:bold;
+border-radius:10px;
+}
+</style>
+
+</head>
+<body>
+
+<div class="result-card">
+
+<h1>Quiz Completed 🎉</h1>
+
+<h2 id="score">0 / 20</h2>
+
+<p id="percentage">0%</p>
+
+<a href="index.html" class="btn">
+Play Again
+</a>
+
+</div>
+
+<script>
+
+let score = localStorage.getItem("score") || 0;
+
+let total = localStorage.getItem("total") || 20;
+
+document.getElementById("score").innerHTML =
+score + " / " + total;
+
+document.getElementById("percentage").innerHTML =
+Math.round((score/total)*100) + "% Score";
+
+</script>
+
+</body>
+</html>
