@@ -1,0 +1,4 @@
+body{margin:0;font-family:Arial,sans-serif;background:#071B2F;color:#fff;display:flex;justify-content:center;align-items:center;height:100vh}
+.container{text-align:center}
+.logo{width:120px;border-radius:50%}
+.btn{display:inline-block;margin-top:20px;padding:12px 24px;background:#00d8c5;color:#071B2F;text-decoration:none;border-radius:8px;font-weight:bold}
